@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import Dropdown from './Dropdown';
+import Dropdown from './Dropdown.jsx';
 
 import { Link } from 'react-router-dom';
 
