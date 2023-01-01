@@ -13,6 +13,7 @@ header {
   color: #212529;
 }
 
+
 .nav-area {
   display: flex;
   align-items: center;
@@ -33,6 +34,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
+
 }
 
 .menu-items {
@@ -122,4 +124,8 @@ button span {
 .content a {
   color: #cc3852;
   margin-right: 10px;
+}
+
+
+@media screen and (min-width: 370px) {
 }

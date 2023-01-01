@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
+import Carrousel from './components/Carrousel/Carrousel'
+import Img1 from './assets/img/img1.jpg'
+import Img2 from './assets/img/img2.jpg';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const images = [Img1, Img2]
   return (
     <div className="App">
       <Navbar/>
+      <main>
+       {/*
+        <Carrousel images={images} autoPlay={false} showButtons={true} />
+       */}
+      </main>
     </div>
     
   )

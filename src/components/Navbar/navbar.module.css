@@ -5,7 +5,6 @@
     display: flex;
     justify-content: space-evenly;
     padding: 33px;
-
 }
 
 nav ul li {
@@ -24,10 +23,12 @@ nav ul li a:hover {
 }
 
 .navbar_icons{
-    font-size: 22px;
+    font-size: 28px;
+    height: 30px;
+    overflow: hidden;
     display: flex;
+    width: 6em;
     justify-content: space-between;
-    width: 5vw;
     color: rgb(41,119,178);
 }
 
@@ -36,6 +37,9 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+.navbar_hamburguermenu{
+  opacity: 0;
+}
 
 .h1{
     font-size:20px
@@ -58,13 +62,6 @@ nav ul li a:hover {
     padding: 5px;
 }
 
-.nav-area {
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
-  }
   
   .logo {
     text-decoration: none;
@@ -168,4 +165,89 @@ nav ul li a:hover {
   .content a {
     color: #cc3852;
     margin-right: 10px;
+  }
+
+  @media screen and (max-width: 440px) {
+    .navbar_hamburguermenu{
+      opacity: 1;
+    }
+    .navbar_container{
+      height: 10vh;
+      position: relative;
+    }
+
+    .navbar_logo{
+      height: 20px;
+      width: 11em;
+      height: 3em;
+      margin-left: -40px;
+      margin-top: -10px;
+    }
+
+    .menu{
+
+      display: flex;
+      width: 100vw;
+      position: absolute;
+      left: -3.8em;
+      top: 5em;
+      flex-direction: column;
+      margin-top: 10px;
+      z-index: 1;
+      background-color: white;
+      transform: translateY(-200%);
+      animation:  MenuClose .5s linear forwards;
+    }
+
+    .menu_open{
+      animation:  MenuOpen .5s linear forwards;
+      display: flex;
+      width: 100vw;
+      position: absolute;
+      left: -.1em;
+      top: 5em;
+      flex-direction: column;
+      margin-top: 10px;
+      z-index: 1;
+      background-color: white;
+    }
+
+
+    .navbar_icons{
+      width: 5em;
+      margin-right: -1.7em;
+      font-size: 25px;
+    }
+  }
+
+
+  @keyframes MenuOpen{
+    0%{
+      transform: translateY(-100%);
+    }
+    50%{
+      transform: translateY(-50%);
+    }
+    100%{
+      transform: translateY(0%);
+    }
+
+  }
+  @keyframes MenuClose{
+    0%{
+      transform: translateY(0%);
+    }
+    50%{
+      transform: translateY(-50%);
+    }
+    70%{
+      z-index: 0;
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(-200%);
+      z-index: 0;
+      opacity: 0;
+    }
+
   }
