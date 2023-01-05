@@ -9,23 +9,23 @@ export const Menu = [
         submenu:[
             {
                 title:'Algarrobo',
-                url:'/'
+                url:'/collections/algarrobo'
             },
             {
                 title:'Chañaral',
-                url:'/'
+                url:'/collections/chañaral'
             },
             {
                 title:'Pichidangui',
-                url:'/'
+                url:'/collections/pichidangui'
             },
             {
                 title:'Playa del Carmen',
-                url:'/'
+                url:'/collections/playa-del-carmen'
             },
             {
                 title:'Egipto',
-                url:'/'
+                url:'/collections/egipto'
             },
         ]
     },
@@ -35,33 +35,29 @@ export const Menu = [
         submenu:[
             {
                 title:'Curso Open Water',
-                url:'/'
+                url:'/collections/curso-open-water'
             },
             {
                 title:'Curso Avanzado de Open Water',
-                url:'/'
+                url:'/collections/cursos-advance'
             },
             {
                 title:'Buceos para Certificados',
-                url:'/'
+                url:'/collections/buceos-guiados'
             },
             {
                 title:'Iniciacion de Buceo',
-                url:'/'
-            },
-            {
-                title:'Egipto',
-                url:'/'
+                url:'/collections/iniciacion-de-buceo'
             },
         ]
     },
     {
         title: 'Playa del Carmen 2023',
-        url:'/'
+        url:'/collections/playa-del-carmen'
     },
     {
         title: 'Egipto 2023',
-        url:'/'
+        url:'/collections/egipto'
     },
     {
         title: 'Nosotros',

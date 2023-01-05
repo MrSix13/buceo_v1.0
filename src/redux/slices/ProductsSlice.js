@@ -1,12 +1,14 @@
 import {createSlice,  } from '@reduxjs/toolkit';
+import { collections } from '../../data';
 import { getAllProducts } from '../thunk-actions/productActions';
 
 
 
 const initialState={
     loading: false,
-    allProducts:[],
-    backupProducts:[],
+    allProducts: localStorage.getItem("Products") ? JSON.parse(localStorage.getItem("Products")) : [],
+    backupProducts:localStorage.getItem("Products") ? JSON.parse(localStorage.getItem("Products")) : [],
+    collections: collections
 }
 
 
