@@ -1,0 +1,20 @@
+.collectionlist_container{
+    background-color: red;
+    margin: auto auto;
+    width: 20em;
+    height: 15em;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+.collectionlist_container h1{
+    position: absolute;
+    left: 20%;
+    bottom: 45%;
+    right: 50%;
+    width: 70%;
+    font-size: 25px;
+    color: white;
+}

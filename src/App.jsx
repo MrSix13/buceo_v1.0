@@ -1,8 +1,11 @@
 import './App.css'
-import Navbar from './components/Navbar/Navbar'
-import Carrousel from './components/Carrousel/Carrousel'
-import Img1 from './assets/img/img1.jpg'
-import Img2 from './assets/img/img2.jpg';
+import { Route, Routes} from 'react-router-dom';
+import { Home, Collections, ProductCollections } from './views';
+import { Navbar,Carrousel } from './components';
+import { Img1,Img2 } from './assets/img'
+
+
+
 
 function App() {
   const images = [Img1, Img2]
@@ -13,7 +16,15 @@ function App() {
        {/*
         <Carrousel images={images} autoPlay={false} showButtons={true} />
        */}
+       <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/collections" element={<Collections/>}/>
+        <Route path="/collections/:slug" element={<ProductCollections/>}/>
+
+       </Routes>
       </main>
+
+
     </div>
     
   )
