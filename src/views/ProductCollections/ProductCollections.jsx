@@ -1,7 +1,7 @@
 import React from 'react'
 import {useParams} from 'react-router-dom'
 import { useSelector } from 'react-redux/es/exports'
-
+import styles from './productcollection.module.css'
 
 function ProductCollections() {
   const {slug} = useParams()
@@ -10,16 +10,18 @@ function ProductCollections() {
   const filterCollections = collections.filter((collection)=> collection.slug === slug)
   
   return (
-    <div>
+    <div className={styles.productCollections_container}>
 
-      <img src={filterCollections[0].image} alt="" />
-      <h1>{filterCollections[0].name}</h1>
+      <div className={styles.productCollection_header}>
+        <img src={filterCollections[0].image} alt="" />
+        <h1>{filterCollections[0].name}</h1>
 
-      <p>{filterCollections[0].description}</p>
+        <p>{filterCollections[0].description}</p>
+      </div>
 
-      <div>
+      <div className={styles.productCollection_hero}>
         {filterProducts.map((product, index)=>(
-          <div key={index}>
+          <div key={index} className={styles.productCollection_card}>
             <img src={product.images[0]} alt="" />
             <h1>{product.name}</h1>
             <p>{product.price}</p>
